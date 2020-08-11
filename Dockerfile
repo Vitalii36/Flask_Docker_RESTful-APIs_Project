@@ -9,4 +9,4 @@ RUN export PYTHONPATH=*'${PYTHONPATH}:/app'
 
 COPY  .  .
 
-CMD ["python", "./runapi.py"]
+CMD ["python", "./run.py"]

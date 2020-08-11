@@ -1,6 +1,6 @@
 from .base import Model
 from core import db
-from .relations import association
+from .relations import client_has_product
 
 
 class Client(Model, db.Model):
