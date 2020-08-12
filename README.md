@@ -40,48 +40,48 @@ we'll be able to add/remove/update records via API routes.
 
 We'll use the following routes methods:
 
-    GET to retrieve information from the source
-    POST to send data to the source
-    PUT to replace (update) data
-    DELETE to remove data
+GET to retrieve information from the source     
+POST to send data to the source     
+PUT to replace (update) data    
+DELETE to remove data   
     
 We'll have the following routes:
 
-    /api/products, /api/clients to get the list of all products, clients from the DB, method: GET
+/api/products, /api/clients to get the list of all products, clients from the DB, method: GET      
 
-    /api/client, to manipulate with the client's records, methods:
+/api/client, to manipulate with the client's records, methods:      
     
-    GET: get client by id
-    POST: add new client, body can include:
-    'code', 'first_name', 'last_name', 'source-id'
-    PUT: update client, body can include:
-    'code', 'first_name', 'last_name', 'source-id'
-    DELETE: remove client, body:
-    id
+GET: get client by id   
+POST: add new client, body can include:     
+'code', 'first_name', 'last_name', 'source-id'      
+PUT: update client, body can include:   
+'code', 'first_name', 'last_name', 'source-id'  
+DELETE: remove client, body:    
+id  
     
-    /api/product, to manipulate with the products records, methods:
+/api/product, to manipulate with the products records, methods:
     
-    GET: get movie by id
-    POST: add new product, body can include:
-    'name', 'price'
-    PUT: update product, body can include:
-    'name', 'price'
-    DELETE: remove product, body:
-    id
+GET: get movie by id    
+POST: add new product, body can include:    
+'name', 'price'     
+PUT: update product, body can include:      
+'name', 'price'     
+DELETE: remove product, body:   
+id
     
-    /api/client-relations to manipulate with client's relations, methods:
+/api/client-relations to manipulate with client's relations, methods:   
     
-    PUT: add relations, body:
-    id, relation_id
-    DELETE: delete relations, body:
-    id
+PUT: add relations, body:   
+id, relation_id     
+DELETE: delete relations, body:     
+id      
     
-    /api/product-relations to manipulate with product's relations, methods:
+/api/product-relations to manipulate with product's relations, methods:     
     
-    PUT: add relations, body:
-    id, relation_id
-    DELETE: delete relations, body:
-    id
+PUT: add relations, body:   
+id, relation_id     
+DELETE: delete relations, body:     
+id      
 
 ## Start
 If cloned repo, in the directory run from the terminal run.py, if the docker 
