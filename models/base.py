@@ -52,9 +52,9 @@ class Model(object):
         """
         obj = cls.query.filter_by(id=row_id).first()
         if cls.__name__ == 'Client':
-            obj.price.append(rel_obj)
+            obj.Product.append(rel_obj)
         elif cls.__name__ == 'Product':
-            obj.store.append(rel_obj)
+            obj.Client.append(rel_obj)
         return commit(obj)
 
     @classmethod
@@ -64,9 +64,9 @@ class Model(object):
         """
         obj = cls.query.filter_by(id=row_id).first()
         if cls.__name__ == 'Client':
-            obj.price.remove(rel_obj)
+            obj.Product.remove(rel_obj)
         elif cls.__name__ == 'Product':
-            obj.store.remove(rel_obj)
+            obj.Client.remove(rel_obj)
         return commit(obj)
 
     @classmethod
@@ -76,7 +76,7 @@ class Model(object):
         """
         obj = cls.query.filter_by(id=row_id).first()
         if cls.__name__ == 'Client':
-            obj.price = []
+            obj.Product = []
         elif cls.__name__ == 'Product':
-            obj.store = []
+            obj.Client = []
         return commit(obj)

@@ -44,7 +44,7 @@ def add_client():
     Add new client
     """
     data = get_request_data()
-    if 'name' in data.keys():
+    if 'first_name' in data.keys():
 
         try:
             new_record = Client.create(**data)
@@ -73,7 +73,7 @@ def update_client():
             err = 'Record with such id does not exist'
             return make_response(jsonify(error=err), 400)
 
-        if 'name' in data.keys():
+        if 'first_name' in data.keys():
             if Client.query.filter_by(name=data['name']).first() != None:
                 client = Client.query.filter_by(name=data['name']).first()
                 err = {k: v for k, v in client.__dict__.items() if k == 'id'}
@@ -81,7 +81,7 @@ def update_client():
 
         for key in data.keys():
             if key not in CLIENT_FIELDS:
-                err =  'fields does not exist in Client table'
+                err = 'fields does not exist in Client table'
                 return make_response(jsonify(error=err), 400)
 
         try:
@@ -150,7 +150,7 @@ def client_add_relation():
                 return make_response(jsonify(error=err), 400)
 
             rel_client = {k: v for k, v in client.__dict__.items() if k in CLIENT_FIELDS}
-            rel_client['price'] = str(client.price)
+            rel_client['Product'] = str(client.Product)
             return make_response(jsonify(rel_client), 200)
 
         else:
@@ -179,7 +179,7 @@ def client_clear_relations():
             return make_response(jsonify(error=err), 400)
 
         rel_client = {k: v for k, v in client.__dict__.items() if k in CLIENT_FIELDS}
-        rel_client['filmography'] = str(client.price)
+        rel_client['Product'] = str(client.Product)
         return make_response(jsonify(rel_client), 200)
     else:
         err = 'No id specified'

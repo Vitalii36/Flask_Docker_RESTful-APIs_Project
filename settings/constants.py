@@ -1,7 +1,9 @@
 import os
 
-# connection credentials ??? this PostgreSQL my mySQL
-DB_URL =  os.environ['DB_URL'] #os.environ['mysql+mysqldb://vitalii36:'Pvs657864!'@127.0.0.1:3306/my_bd']
+# connection credentials
+DB_URL =  os.environ['DB_URL']
+# before run api you need export DB_URL=mysql+mysqldb://user:password@host:port/database_name in consol
+# DB_URL = 'mysql+mysqldb://user:password@host:port/database_name' # if you know your DB
 
 # entities properties
 CLIENT_FIELDS = ['id', 'code', 'first_name', 'last_name', 'source-id']

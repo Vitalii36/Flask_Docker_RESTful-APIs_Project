@@ -155,7 +155,7 @@ def product_add_relation():
                 return make_response(jsonify(error=err), 400)
 
             rel_product = {k: v for k, v in product.__dict__.items() if k in PRODUCT_FIELDS}
-            rel_product['cast'] = str(product.cast)
+            rel_product['Client'] = str(product.Client)
             return make_response(jsonify(rel_product), 200)
 
         else:
@@ -185,7 +185,7 @@ def product_clear_relations():
             return make_response(jsonify(error=err), 400)
 
         rel_product = {k: v for k, v in product.__dict__.items() if k in PRODUCT_FIELDS}
-        rel_product['cast'] = str(product.cast)
+        rel_product['Client'] = str(product.Client)
         return make_response(jsonify(rel_product), 200)
     else:
         err = 'No id specified'

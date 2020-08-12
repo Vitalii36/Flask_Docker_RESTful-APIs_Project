@@ -5,7 +5,7 @@ WORKDIR /api
 COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
 
-RUN export PYTHONPATH=*'${PYTHONPATH}:/app'
+RUN export PYTHONPATH=*'${PYTHONPATH}:/api'
 
 COPY  .  .
 
