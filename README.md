@@ -9,7 +9,7 @@ MySQL database my_bd is created on the basis of CSV files from the course "Intro
 client_has_product. The table of clients is connected by the relation many to many through the table client_has_product with products.
 
 <div align="center">
-    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/image_readme/Database_my_db.png?raw=true">
+    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/blob/master/image_readme/Database_my_db.png?raw=true">
 </div>
 
 Before start we need write Database URL in constans.py like this
@@ -101,9 +101,9 @@ If you have ERROR like "caching_sha2_password" you can use MySQL consol and you 
 
 ## Example
 <div align="center">
-    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/image_readme/Example_1.png?raw=true">
-    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/image_readme/Example_2.png?raw=true">
-    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/image_readme/Example_3.png?raw=true">
+    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/blob/master/image_readme/Example_1.png?raw=true">
+    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/blob/master/image_readme/Example_2.png?raw=true">
+    <img align="center" src="https://github.com/Vitalii36/Flask_Docker_RESTful-APIs_Project/blob/master/image_readme/Example_3.png?raw=true">
 
 </div> 
 
